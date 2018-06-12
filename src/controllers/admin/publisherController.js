@@ -38,7 +38,7 @@ lmsApp.controller("publisherController", function($scope, endpointConfig, lmsCon
 			"publisherAddress": publisherAddress,
 			"publisherPhone": publisherPhone
 		};
-		endpointConfig.saveObject(lmsConstants.ALL_PUBLISHERS, publisher).then(function(id){
+		endpointConfig.saveObject(lmsConstants.PUBLISHER_CREATE, publisher).then(function(id){
 			endpointConfig.getAllObjects(lmsConstants.ALL_PUBLISHERS).then(function(data){
 				$scope.publishers = data;
 			})

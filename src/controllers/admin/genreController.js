@@ -49,7 +49,7 @@ lmsApp.controller("genreController", function($scope, endpointConfig, lmsConstan
 	
 	// Create new genre
 	$scope.createGenre = function(genreName){
-		endpointConfig.saveObject(lmsConstants.ALL_GENRES + "?name=" + genreName).then(function(id){
+		endpointConfig.saveObject(lmsConstants.GENRE_CREATE + "?name=" + genreName).then(function(id){
 			endpointConfig.getAllObjects(lmsConstants.ALL_GENRES).then(function(data){
 				$scope.genres = data;
 			})

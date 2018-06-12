@@ -193,7 +193,7 @@ lmsApp.controller("bookController", function($scope, endpointConfig, lmsConstant
 			"publisher": $scope.selectedPublisher,
 		};
 		console.log(bookDto);
-		endpointConfig.saveObject(lmsConstants.ALL_BOOKS, bookDto).then(function(id){
+		endpointConfig.saveObject(lmsConstants.BOOK_CREATE, bookDto).then(function(id){
 			endpointConfig.getAllObjects(lmsConstants.ALL_BOOKS).then(function(data){
 				$scope.books = data;
 			})

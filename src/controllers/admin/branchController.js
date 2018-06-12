@@ -37,7 +37,7 @@ lmsApp.controller("branchController", function($scope, endpointConfig, lmsConsta
 			"branchName": branchName,
 			"branchAddress": branchAddress,
 		};
-		endpointConfig.saveObject(lmsConstants.ALL_BRANCHES, branch).then(function(id){
+		endpointConfig.saveObject(lmsConstants.BRANCH_CREATE, branch).then(function(id){
 			endpointConfig.getAllObjects(lmsConstants.ALL_BRANCHES).then(function(data){
 				$scope.branches = data;
 			})

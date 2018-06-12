@@ -52,7 +52,7 @@ lmsApp.controller("authorController", function($scope, endpointConfig, lmsConsta
 	
 	// Create new author
 	$scope.createAuthor = function(authorName){
-		endpointConfig.saveObject(lmsConstants.ALL_AUTHORS + "?name=" + authorName).then(function(id){
+		endpointConfig.saveObject(lmsConstants.AUTHOR_CREATE + "?name=" + authorName).then(function(id){
 			endpointConfig.getAllObjects(lmsConstants.ALL_AUTHORS).then(function(data){
 				$scope.authors = data;
 			})
